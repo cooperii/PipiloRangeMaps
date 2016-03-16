@@ -34,6 +34,9 @@ plot(polyerythro_winter, add=TRUE, xlim=c(-90,-65),ylim=ycoords, col=alpha("dodg
 
 #
 #Use this set for Countries#
+dev.off()
+dev.new(5,4)
+quartz
 map("world", regions="mexico", xlim=xcoords, ylim=ycoords,  resolution = 0, fill = FALSE, lwd=0.5)
 map("world", regions="usa",xlim=xcoords, ylim=ycoords, resolution=0, fill=FALSE, add=TRUE, lwd=0.5)
 map("world", regions="canada",xlim=xcoords, ylim=ycoords, resolution=0, fill=FALSE, add=TRUE, lwd=0.5)
@@ -42,3 +45,4 @@ map("world", regions="guatemala",xlim=xcoords, ylim=ycoords, resolution=0, fill=
 plot(polyerythro_resident, add=TRUE, xlim=c(-90,-65),ylim=ycoords, col=alpha("darkorchid4", 0.6), border=FALSE)
 plot(polyerythro_summer, add=TRUE, xlim=c(-90,-65),ylim=ycoords, col=alpha("darkorange2", 0.6), border=FALSE)
 plot(polyerythro_winter, add=TRUE, xlim=c(-90,-65),ylim=ycoords, col=alpha("dodgerblue1", 0.6), border=FALSE)
+legend(-125, 25, c("year-round", "summer", "winter"), fill=c("darkorchid4", "darkorange2", "dodgerblue1"),cex=0.5)
